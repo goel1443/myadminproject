@@ -2,7 +2,7 @@
 <div>
     
     <div class=" sidebarlogo d-flex justify-content-around align-items-center w-100 pt-3">
-        <h5 class="mb-0">Menu</h5>
+       <a href="#" class="d-flex align-items-center text-decoration-none"><img src="../assets/image/dash1.svg" style="width:50px"/><h3 class="mb-0 ms-1">Logo</h3></a>
 
         <button class="btn text-white border-0 shadow-none" @click="closesidebar()">
             <img src="../assets/icon/sidebartoggle.svg" alt="sidebartoggle" class="sidebaricon" />
@@ -103,11 +103,11 @@
             </li>
 
             <li class="nav-list">
-                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
+                <a href="#submenu4" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
                     <img src="../assets/sidebaricon/speedometer.svg" alt="speedometer" />
                     <span class="ms-1 ">Dashboards</span>
                 </a>
-                <ul class="collapse  flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                <ul class="collapse  flex-column ms-1" id="submenu4" data-bs-parent="#menu">
                     <li class="w-100">
                         <a href="#" class="nav-link">
                             -
@@ -129,11 +129,11 @@
                 </a>
             </li>
             <li class="nav-list">
-                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
+                <a href="#submenu5" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
                     <img src="../assets/sidebaricon/bootstrap.svg" alt="bootstrap" />
                     <span class="ms-1 ">Bootstrap</span>
                 </a>
-                <ul class="collapse  flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                <ul class="collapse  flex-column ms-1" id="submenu5" data-bs-parent="#menu">
                     <li class="w-100">
                         <a href="#" class="nav-link">
 
@@ -148,11 +148,11 @@
                 </ul>
             </li>
             <li class="nav-list">
-                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
+                <a href="#submenu6" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
                     <img src="../assets/sidebaricon/grid.svg" alt="grid" />
                     <span class="ms-1 ">Products</span>
                 </a>
-                <ul class="collapse  flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                <ul class="collapse  flex-column ms-1" id="submenu6" data-bs-parent="#menu">
                     <li class="w-100">
                         <a href="#" class="nav-link">
                             <span >Product 1</span>
@@ -220,6 +220,10 @@ export default {
     color: var(--white);
 }
 
+.sidebarlogo h3{
+
+    color: var(--white);
+}
 .sidebar-list {
     margin: 0px 15px;
 }

@@ -6,7 +6,7 @@
            
                <div class=" d-flex justify-content-between navbar-content   align-items-center">
             
-                    <ul class="  d-flex searchlistcontent align-items-center mb-0 ">
+                    <ul class="  d-flex searchlistcontent align-items-center ps-1 mb-0 ">
                         <li >
 
                             <button class="btn text-white border-0 shadow-none" @click="opensidebar()">
@@ -56,20 +56,32 @@
                
                     <ul class="  navicon d-flex justify-content-end iconcontent align-items-center mb-0 ">
                         <li class="nav-item dropdown country">
-                            <a class="nav-link text-light bg-transparent dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">EN</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link text-light bg-transparent dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="../assets/flagicon/united-states.png" style="width:24px"/><span class="ms-1">EN</span></a>
+                            <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item " href="#"><img src="../assets/flagicon/united-states.png" style="width:24px"/><span >English (US)</span></a>
+                                </li>
+                               
+                                <li>
+                                    <a class="dropdown-item " href="#"><img src="../assets/flagicon/germany.png" style="width:24px"/><span >Deutsch</span></a>
+                                </li>
+                              
+                                <li>
+                                    <a class="dropdown-item " href="#"><img src="../assets/flagicon/spain.png" style="width:24px"/><span >Español</span></a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item " href="#"><img src="../assets/flagicon/france.png" style="width:24px"/><span >Français</span></a>
                                 </li>
                                 <li>
-                                    <hr class="dropdown-divider" />
+                                    <a class="dropdown-item " href="#"><img src="../assets/flagicon/brazil.png" style="width:24px"/><span >Português (BR)</span></a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item " href="#"><img src="../assets/flagicon/united-states.png" style="width:24px"/><span >简体中文</span></a>
                                 </li>
+                                <li>
+                                    <a class="dropdown-item " href="#"><img src="../assets/flagicon/united-states.png" style="width:24px"/><span>لعربية (AE)</span></a>
+                                </li>
+                               
                             </ul>
                         </li>
 
@@ -105,7 +117,7 @@
                         <li class="nav-item">
                             <div class="d-flex align-items-center text-nowrap me-lg-0 me-2">
                                 <img src="../assets/image/profile.png" alt="profile" class="img-fluid rounded-circle profileimg" />
-                                <div class="mx-4" id="admin-data">
+                                <div class="mx-3" id="admin-data">
                                     <h6 class="mb-0">Name</h6>
                                     <p class="mb-0">
                                         Admin
@@ -178,9 +190,19 @@ li{
     background-color: #151122;
 
     color: #828184;
-    border: 2px solid var(--black);
+   
     width:100%;
 }
+
+
+#admin-data h6{
+font-size:14px;
+}
+
+#admin-data p{
+font-size:12px;
+}
+
 
 .bell {
     position: relative;
@@ -202,6 +224,8 @@ li{
 .star img {
     animation: tada 4s alternate ease-in-out infinite;
 }
+
+
 
 @keyframes tada {
     0% {
@@ -238,8 +262,8 @@ li{
 .nav-link {
     color: var(--white);
     background-color: #151122;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     display: flex;
 
     justify-content: center;
@@ -302,6 +326,32 @@ li{
 
 .dropdown-toggle::after{
     display:none;
+}
+
+
+.country .dropdown-menu{
+    background-color: #151122;
+   padding:0px;
+}
+
+.country .dropdown-item{
+
+background-color: #1d1930;
+    color:#ffffffcc;
+    border-bottom:1px solid #151122;
+    font-size:14px;
+    display:flex;
+    align-items: center;
+    padding:8px 20px;
+}
+
+.country .dropdown-item:hover{
+
+    color:var(--white)
+}
+
+.country .dropdown-item span{
+    margin-left:10px;
 }
 
 @media all and (min-width:1200px) and (max-width: 1399px) {

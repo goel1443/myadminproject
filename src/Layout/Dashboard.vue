@@ -3,20 +3,20 @@
     <section>
       <div class="custom-container">
         <div class="dashboard-row">
-          <div class="dashboard-navbar fixed-top">
+          <div class="dashboard-navbar ">
 
-            <div class="header ">
+            <div class="header fixed-top ">
               <NavBar :sideclose="sideclose"    @opensidebar="callTogglesnavbar" />
             </div>
           </div>
-          <div class="dashboard-sidebar" :class="{active:sideclose ,hide:infoBar}" >
+          <div class="dashboard-sidebar" :class="{active:sideclose }" id="sidebarMenu">
            
         
           <SideBar @closesidebar="callTogglesidebar"  />
      
           
           </div>  
-          <div class="dashboard-content">
+          <div class="dashboard-content" :class="{active:sideclose }">
               <slot>
                
               </slot>
@@ -91,8 +91,8 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
- 
+  
+ z-index: 999;
   height:100%;
 }
 
@@ -101,12 +101,17 @@ export default {
 
   margin-left:250px;
   margin-top:80px;
-   min-height: 900px;
+   min-height: 100vh;
    color:var(--white);
-   font-family:'Roboto'
-  
+   font-family:'Roboto';
+  z-index:-1;
+ 
 }
 
+.dashboard-content.active{
+
+  margin-left:0px;
+}
 
 .header {
     background-color: #1d1930;
@@ -114,12 +119,19 @@ export default {
     color: var(--white);
     font-family: "Roboto";
     font-size: 14px;
-    z-index: -1;
+    z-index: 1;
     
   }
 
   
+  @media all and (min-width:1200px) and (max-width: 1399px) {
+    .dashboard-content.active,
+.dashboard-content{
 
+margin-left:0px;
+}
+
+}
 
 @media all and (min-width:992px) and (max-width: 1199px) {
 
@@ -137,6 +149,12 @@ export default {
   .dashboard-sidebar.active {
   transition: all 0.3s ease-in-out;
   margin-left: -250px;
+}
+
+.dashboard-content.active,
+.dashboard-content{
+
+margin-left:0px;
 }
 
 }
@@ -159,6 +177,12 @@ margin-left: 0px;
   margin-left: -250px;
 }
 
+.dashboard-content.active,
+.dashboard-content{
+
+margin-left:0px;
+}
+
 }
 
 
@@ -178,6 +202,12 @@ margin-left: 0px;
 .dashboard-sidebar.active {
   transition: all 0.3s ease-in-out;
   margin-left: -250px;
+}
+
+.dashboard-content.active,
+.dashboard-content{
+
+margin-left:0px;
 }
 
 }
