@@ -3,7 +3,7 @@ import Default from '../views/Default.vue'
 
 const routes = [
   {
-    path: '/Default',
+    path: '/',
     name: 'Default',
     component: Default
   },

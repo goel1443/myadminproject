@@ -2,7 +2,7 @@
 <div>
     
     <div class=" sidebarlogo d-flex justify-content-around align-items-center w-100 pt-3">
-       <a href="#" class="d-flex align-items-center text-decoration-none"><img src="../assets/image/dash1.svg" style="width:50px"/><h3 class="mb-0 ms-1">Logo</h3></a>
+       <a href="#" class="d-flex align-items-center text-decoration-none"><img src="/image/dash1.svg" style="width:50px"/><h3 class="mb-0 ms-1">Logo</h3></a>
 
         <button class="btn text-white border-0 shadow-none" @click="closesidebar()">
             <img src="../assets/icon/sidebartoggle.svg" alt="sidebartoggle" class="sidebaricon" />
