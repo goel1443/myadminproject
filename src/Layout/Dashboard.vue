@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section>
+    <section class="section">
       <div class="custom-container">
         <div class="dashboard-row">
           <div class="dashboard-navbar ">
@@ -9,10 +9,10 @@
               <NavBar :sideclose="sideclose"    @opensidebar="callTogglesnavbar" />
             </div>
           </div>
-          <div class="dashboard-sidebar" :class="{active:sideclose }" id="sidebarMenu">
+          <div class="dashboard-sidebar" :class="{active:sideclose }"  id="sidebarMenu">
            
         
-          <SideBar @closesidebar="callTogglesidebar"  />
+          <SideBar @closesidebar="callTogglesidebar" />
      
           
           </div>  
@@ -20,6 +20,10 @@
               <slot>
                
               </slot>
+          </div>
+
+          <div class="dashboard-footer " :class="{active:sideclose }">
+             <Footer/>
           </div>
 
 
@@ -30,13 +34,15 @@
 </template>
 
 <script>
+import Footer from '@/components/Footer'
 import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
 export default {
   name:'Dashboard',
   components:{
     NavBar,
-    SideBar
+    SideBar,
+    Footer
   },
 
   data() {
@@ -79,6 +85,11 @@ export default {
 </script>
 
 <style scoped>
+
+.section{
+
+  background-color: #1d1930;
+}
 .dashboard-row{
   min-height: 100%;
 }
@@ -97,6 +108,8 @@ export default {
 }
 
 
+
+
 .dashboard-content{
 
   margin-left:250px;
@@ -105,10 +118,25 @@ export default {
    color:var(--white);
    font-family:'Roboto';
   z-index:-1;
+  background-color: #151122;
+  transition: 0.5s  ;
  
 }
 
-.dashboard-content.active{
+
+.dashboard-footer{
+
+  margin-left:250px;
+  transition: 0.5s  ;
+  background-color: #1d1930;
+  color:var(--white);
+   font-family:'Roboto';
+  
+}
+
+
+.dashboard-content.active,
+.dashboard-footer.active{
 
   margin-left:0px;
 }
@@ -126,7 +154,8 @@ export default {
   
   @media all and (min-width:1200px) and (max-width: 1399px) {
     .dashboard-content.active,
-.dashboard-content{
+.dashboard-content,
+.dashboard-footer{
 
 margin-left:0px;
 }
@@ -142,17 +171,19 @@ margin-left:0px;
 
   .dashboard-sidebar{
 
-    transition: all 0.3s ease-in-out;
+    transition: 0.5s  ;
   margin-left: 0px;
   }
 
   .dashboard-sidebar.active {
-  transition: all 0.3s ease-in-out;
+    transition: 0.5s ;
   margin-left: -250px;
 }
 
 .dashboard-content.active,
-.dashboard-content{
+.dashboard-content,
+.dashboard-footer
+{
 
 margin-left:0px;
 }
@@ -169,16 +200,17 @@ margin-left:0px;
 
 .dashboard-sidebar{
 
-transition: all 0.3s ease-in-out;
+  transition: 0.5s ;
 margin-left: 0px;
 }
 .dashboard-sidebar.active {
-  transition: all 0.3s ease-in-out;
+  transition: 0.5s ;
   margin-left: -250px;
 }
 
 .dashboard-content.active,
-.dashboard-content{
+.dashboard-content,
+.dashboard-footer{
 
 margin-left:0px;
 }
@@ -196,16 +228,17 @@ margin-left:0px;
 
 .dashboard-sidebar{
 
-transition: all 0.3s ease-in-out;
+transition: 0.5s ;
 margin-left: 0px;
 }
 .dashboard-sidebar.active {
-  transition: all 0.3s ease-in-out;
+  transition: 0.5s ;
   margin-left: -250px;
 }
 
 .dashboard-content.active,
-.dashboard-content{
+.dashboard-content,
+.dashboard-footer{
 
 margin-left:0px;
 }

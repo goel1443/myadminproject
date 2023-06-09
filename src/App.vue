@@ -1,7 +1,9 @@
 <template>
  <div>
-
-  <Dashboard>
+     <template v-if=" this.$route.meta.auth==true">
+      <router-view />
+    </template>
+  <Dashboard v-else>
     <router-view/>
 
   </Dashboard>
@@ -22,10 +24,9 @@ export default {
 
 <style>
 
-#app{
 
-  background-color: #151122;
-}
+
+
 :root{
 
  --white:#ffffff;
