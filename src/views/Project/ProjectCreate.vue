@@ -179,10 +179,11 @@ label {
     filter: invert(1);
 }
 
-::placeholder {
-    color: #898989;
-    font-size: 15px;
+::placeholder{
 
+color:#898989;
+letter-spacing: 1px;
+font-size:14px;
 }
 
 .form-select {

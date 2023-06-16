@@ -26,11 +26,14 @@ export default {
 
 
 
-
 :root{
 
  --white:#ffffff;
  --black:#000000;
+}
+
+.swiper-button-next:after,  .swiper-button-prev:after {
+    display:none
 }
 
 @font-face {
@@ -63,5 +66,6 @@ export default {
   src: url("@/assets/font/Roboto-Thin.ttf");
   font-weight: 100;
 }
+
 
 </style>

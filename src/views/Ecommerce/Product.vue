@@ -82,7 +82,7 @@
                                             <div class="card-body filter-cards-view animate-chk">
                                                 <div class="product-filter">
                                                     <h6 class="f-w-600">category</h6>
-                                                    <div class="checkbox-animated mt-0"><label class="d-block" for="edo-ani5"><input class="checkbox_animated" id="edo-ani5" type="checkbox" data-original-title="" title="" value="Man Shirt">Man Shirt</label></div>
+                                                    <div class="checkbox-animated mt-0"><label class="d-block" for="edo-ani5"><input class="checkbox_animated" v-model="Product.mainheading" id="edo-ani5" type="checkbox"  data-original-title="" title="" value="Denim Jacket">Denim Jacket</label></div>
                                                     <div class="checkbox-animated mt-0"><label class="d-block" for="edo-ani6"><input class="checkbox_animated" id="edo-ani6" type="checkbox" data-original-title="" title="" value="Man Jeans">Man Jeans</label></div>
                                                     <div class="checkbox-animated mt-0"><label class="d-block" for="edo-ani7"><input class="checkbox_animated" id="edo-ani7" type="checkbox" data-original-title="" title="" value="Woman Top">Woman Top</label></div>
                                                     <div class="checkbox-animated mt-0"><label class="d-block" for="edo-ani8"><input class="checkbox_animated" id="edo-ani8" type="checkbox" data-original-title="" title="" value="Women Jeans">Women Jeans</label></div>
@@ -247,7 +247,7 @@
             </div>
             <div class="product-wrapper-grid" :class="changelist">
                 <div class="row">
-                    <div  :class="add" v-for="(productlist, index) in Product" :key="index">
+                    <div  :class="add" v-for="(productlist, index) in Datafilter" :key="index">
                         <div class="card">
                             <div class="product-box">
                                 <div class="product-img">
@@ -516,7 +516,8 @@ export default {
 
             ],
             modal_data:'',
-            changelist:''
+            changelist:'',
+            productfilter:''
         }
 
     },
@@ -562,6 +563,25 @@ export default {
        
 
        
+    },
+
+    computed: {
+        
+                Datafilter(){
+                    console.log(this.productfilter)
+                    if(!this.productfilter){
+                        return this.Product;
+
+                    }
+                    
+
+                    else{
+                        return this.Product.filter((p) =>
+                            (p.mainheading).toLowerCase().includes(this.productfilter.toLowerCase()) 
+                            );
+
+                    }
+                }
     }
 
 }

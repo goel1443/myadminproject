@@ -52,12 +52,12 @@
                 </a>
             </li>
 
-            <li class="nav-item onhover" >
+            <li class="nav-item onhover " >
                 <a class="nav-link star" href="#">
                     <img src="../assets/icon/star.svg" alt="star" class="filter" />
                 </a>
 
-             <div class="starhover" >
+             <div class="starhover starpos" >
                     <ul class="ps-0">
                         <li class="headlist text-center">
                             <img src="../assets/icon/tooltip.svg" alt="tooltip"  class="hoverimg"/>
@@ -68,14 +68,14 @@
                 </div>
             </li>
 
-            <li class="nav-item onhover">
+            <li class="nav-item onhover ">
                 <a class="nav-link bell" href="#">
                     <img src="../assets/icon/bell.svg" alt="bell" class="filter" />
                     <span class="badge bg-primary rounded-circle bellspan">1</span>
                    
                 </a>
 
-                <div class="starhover" style="right:268px">
+                <div class="starhover bellpos" >
                     <ul class="ps-0">
                         <li class="headlist text-center">
                             <img src="../assets/icon/tooltip.svg" alt="tooltip"  class="hoverimg"/>
@@ -85,12 +85,12 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item onhover">
+            <li class="nav-item onhover ">
                 <a class="nav-link" href="#">
                     <img src="../assets/icon/message.svg" alt="message" class="filter" />
                 </a>
                 
-                <div class="starhover" style="right:208px">
+                <div class="starhover messpos" >
                     <ul class="ps-0">
                         <li class="headlist text-center">
                             <img src="../assets/icon/tooltip.svg" alt="tooltip"  class="hoverimg"/>
@@ -409,7 +409,7 @@ ul {
     position: absolute;
     background-color: #151122!important;
     color: #000;
-    right: 316px;
+    
     top: 76px;
     width: 215px;
     height: 215px;
@@ -418,19 +418,31 @@ ul {
      visibility: hidden;
 
       opacity: 0;
-        transform: translateY(-35px) scaleY(0);
+        transform: translateY(35px) ;
         transition: all 0.3s linear;
 
         
 
     
 }
+.starpos{
+    right: 316px;
+}
 
+.bellpos{
+
+    right:268px;
+}
+
+.messpos{
+
+    right:208px;
+}
 .onhover:hover .starhover,
 .profilehover:hover .profilehover-data{
     visibility: visible;
     opacity: 1;
-        transform: translateY(0) scaleY(1);
+        transform: translateY(0) ;
         transition: all 0.3s linear;
         cursor: pointer;
          
@@ -496,7 +508,7 @@ ul {
     visibility: hidden;
 
 opacity: 0;
-  transform: translateY(-35px) scaleY(0);
+  transform: translateY(35px) ;
   transition: all 0.3s linear;
 
 
@@ -523,13 +535,10 @@ opacity: 0;
     padding-left:0px;
 }
 @media all and (min-width: 1200px) and (max-width: 1399px) {
-    .searchlist {
-        margin-left: 0px;
-    }
+    .navicon{
+    gap: 14px;
+}
 
-    .searchlist.active {
-        margin-left: 0px;
-    }
 }
 
 @media all and (min-width: 992px) and (max-width: 1199px) {
@@ -550,6 +559,19 @@ opacity: 0;
     .search {
         width: 225px;
     }
+    .starpos{
+    right: 240px;
+}
+
+.bellpos{
+
+right:186px;
+}
+
+.messpos{
+
+right:128px;
+}
 
     #admin-data {
         display: none;
@@ -631,5 +653,10 @@ opacity: 0;
         z-index: 2;
         background-color: black;
     }
+
+
+.starhover{
+    right:0;
+}
 }
 </style>

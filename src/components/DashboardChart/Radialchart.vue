@@ -23,28 +23,37 @@
 
       chartOptions: {
         chart: {
-          height: 350,
+          height: 150,
           type: "radialBar"
         },
         
         plotOptions: {
           radialBar: {
+            offsetX: 0,
+          offsetY: 20,
             hollow: {
-              size: "50%"
+              size: "50%",
+              
             },
+
 
             dataLabels: {
               value: {
                 color: "#fff",
                 show: true,
                 offsetY: -10,
-                offsetX: 10
+                offsetX: 11
               }
             }
-          }
+          },
+
+         
         },
         labels: [""],
-        colors: ["#534686"]
+        colors: ["#534686"],
+
+
+        
       },
           
       }
@@ -53,7 +62,13 @@
   </script> 
 
 
+<style >
+.apexcharts-tooltip{
+  background-color:black !important;
 
+}
+
+</style>
 
   
   

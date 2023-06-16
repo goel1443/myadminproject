@@ -9,13 +9,15 @@
               <NavBar :sideclose="sideclose"    @opensidebar="callTogglesnavbar" />
             </div>
           </div>
+       
           <div class="dashboard-sidebar" :class="{active:sideclose }"  id="sidebarMenu">
            
-        
+  
           <SideBar @closesidebar="callTogglesidebar" />
-     
+        
           
-          </div>  
+          </div> 
+       
           <div class="dashboard-content" :class="{active:sideclose }">
               <slot>
                
@@ -76,7 +78,7 @@ export default {
     },
 
 
-
+   
 
    
   }
@@ -85,6 +87,7 @@ export default {
 </script>
 
 <style scoped>
+
 
 .section{
 
@@ -120,6 +123,7 @@ export default {
   z-index:-1;
   background-color: #151122;
   transition: 0.5s  ;
+  padding:0px 15px 0px 15px;
  
 }
 
@@ -147,20 +151,10 @@ export default {
     color: var(--white);
     font-family: "Roboto";
     font-size: 14px;
-    z-index: 1;
+    z-index: 2;
     
   }
 
-  
-  @media all and (min-width:1200px) and (max-width: 1399px) {
-    .dashboard-content.active,
-.dashboard-content,
-.dashboard-footer{
-
-margin-left:0px;
-}
-
-}
 
 @media all and (min-width:992px) and (max-width: 1199px) {
 
@@ -242,6 +236,9 @@ margin-left: 0px;
 
 margin-left:0px;
 }
+.dashboard-content{
 
+  padding:0px !important;
+}
 }
 </style>

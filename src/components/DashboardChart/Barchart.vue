@@ -1,8 +1,8 @@
 <template>
   <div>
     <div id="chart3">
-                  <apexchart type="bar" height="200px" :options="chartOptions" :series="series"></apexchart>
-                </div>
+          <apexchart type="bar" height="200px" :options="chartOptions" :series="series"></apexchart>
+    </div>
   </div>
 </template>
 
@@ -16,31 +16,52 @@ export default {
             series: [
         {
           name: "Net Profit",
-          data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+          data: [30, 70, 40, 50, 70, 50, 90]
         },
         {
           name: "Revenue",
-          data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+          data: [60, 40, 30, 60, 80, 70, 75]
         },
         {
           name: "Free Cash Flow",
-          data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+          data: [40, 60, 35, 90, 60, 60, 60]
         }
       ],
       chartOptions: {
         chart: {
           type: "bar",
-          height: 250
+          height: 250,
+          toolbar:{
+          show:false,
+         
+        tools: {
+          download: false,
+          selection: false,
+          zoom: false,
+          zoomin: false,
+          zoomout: false,
+          pan: false,
+          
+          
+          
         },
+        },
+       
+        },
+       
+        colors:['rgb(183, 177, 215)','rgb(183, 177, 215)','rgb(255, 255, 255)'],
         plotOptions: {
           bar: {
             horizontal: false,
             columnWidth: "55%",
-            endingShape: "rounded"
+            endingShape: "rounded",
+            borderRadius: 5,
+            offsetY:10
           }
         },
         dataLabels: {
-          enabled: false
+          enabled: false,
+         
         },
         stroke: {
           show: true,
@@ -63,26 +84,44 @@ export default {
       
         },
         yaxis: {
+          show: false,
           title: {
             text: "$ (thousands)"
-          }
+          },
+          
         },
         fill: {
           opacity: 1
         },
         tooltip: {
-          y: {
-            formatter: function(val) {
-              return "$ " + val + " thousands";
-            }
-          }
+         enabled:true,
+         theme: true,
+      style: {
+        fontSize: '12px',
+        
+        
+        
+      },
+        },
+
+        legend:{
+          show:false
+        },
+        grid:{
+
+          show:false
         }
       },
         }
-    }
+    },
+
+    
 }
 </script>
 
-<style>
+<style >
+.apexcharts-tooltip{
+  background-color:black !important;
 
+}
 </style>

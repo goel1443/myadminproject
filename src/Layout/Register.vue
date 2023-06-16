@@ -80,7 +80,7 @@
                                  
                                   <div class="input-group  rounded-2 my-2">
                                       <input 
-                                      :type="!show ? 'password': 'text'"
+                                      :type="!showconfirm ? 'password': 'text'"
                                       class="form-control shadow-none border-0 bg-transparent"
                                       placeholder="**********"
                                       aria-label="Recipient's username"
@@ -90,7 +90,7 @@
                                       <button
                                       class="btn input-group-text show-btn border-0 bg-transparent shadow-none"
                                       id="basic-addon2"
-                                      @click.prevent="showpassword"
+                                      @click.prevent="showconfirmpassword"
                                       >
                                       show
                                       </button>
@@ -134,8 +134,8 @@
   data(){
       return{
   
-          show:false
-      }
+          show:false,
+        showconfirm:false      }
   },
   
   methods:{
@@ -143,6 +143,10 @@
       showpassword(){
   
           this.show=!this.show
+      },
+      showconfirmpassword(){
+
+        this.showconfirm=!this.showconfirm
       }
   },
 

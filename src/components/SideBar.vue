@@ -1,8 +1,8 @@
 <template>
 <div>
     
-    <div class=" sidebarlogo d-flex justify-content-around align-items-center w-100 pt-3">
-       <a href="#" class="d-flex align-items-center text-decoration-none"><img src="/image/dash1.svg" style="width:50px"/><h3 class="mb-0 ms-1">Logo</h3></a>
+    <div class=" sidebarlogo d-flex justify-content-around  w-100 pt-3">
+       <a href="#" class="d-flex align-items-center text-decoration-none"><img src="/image/dashboards.png" style="width:24px"/><h3 class="mb-0 ms-1">Logo</h3></a>
 
         <button class="btn text-white border-0 shadow-none" @click="closesidebar()">
             <img src="../assets/icon/sidebartoggle.svg" alt="sidebartoggle" class="sidebaricon" />
@@ -15,173 +15,143 @@
             </li>
 
             <li class="nav-list">
-                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
-                    <img src="../assets/sidebaricon/speedometer.svg" alt="speedometer" />
+                <router-link :to="{name:'Default'}"  class="nav-link mainlink align-middle">
+                    <img src="../assets/sidebaricon/home.svg" alt="home" />
                     <span class="ms-1 ">Dashboards</span>
+                </router-link>
+                
+            </li>
+
+
+            <li class="nav-list">
+                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
+                    <img src="../assets/sidebaricon/widget.svg" alt="widget" />
+                    <span class="ms-1 ">Widgets</span>
                 </a>
                 <ul class="collapse  flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                     <li class="w-100">
-                        <router-link :to="{name:'Default'}" class="nav-link">
+                        <router-link :to="{name:'General'}" class="nav-link">
                             -
                             <span >
-                                Default
+                                General
                             </span>
                         </router-link>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link">
+
+                    <li class="w-100">
+                        <router-link :to="{name:'Chart'}" class="nav-link">
                             -
-                            <span>Item 2</span>
-                        </a>
+                            <span >
+                                Chart
+                            </span>
+                        </router-link>
                     </li>
+                    
                 </ul>
             </li>
-            <li>
-                <a href="#" class="nav-link align-middle">
-                    <img src="../assets/sidebaricon/table.svg" alt="table" />
-                    <span class="ms-1 ">Orders</span>
-                </a>
+
+            <li class="nav-item listheading py-3 ps-3 rounded-2">
+                <h6 class="mb-0">Applications</h6>
             </li>
+
+
+
             <li class="nav-list">
                 <a href="#submenu2" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
-                    <img src="../assets/sidebaricon/bootstrap.svg" alt="bootstrap" />
-                    <span class="ms-1 ">Bootstrap</span>
+                    <img src="../assets/sidebaricon/widget.svg" alt="widget" />
+                    <span class="ms-1 ">Project</span>
                 </a>
                 <ul class="collapse  flex-column ms-1" id="submenu2" data-bs-parent="#menu">
                     <li class="w-100">
-                        <a href="#" class="nav-link">
+                        <router-link :to="{name:'Project List'}" class="nav-link">
+                            -
+                            <span>
+                                Project List
+                            </span>
+                        </router-link>
+                    </li>
 
-                            <span >Item 1</span>
-                        </a>
+                    <li class="w-100">
+                        <router-link :to="{name:'Project Create'}" class="nav-link">
+                            -
+                            <span>
+                                Project Create
+                            </span>
+                        </router-link>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            <span >Item 2</span>
-                        </a>
-                    </li>
+
+                    
+                    
                 </ul>
             </li>
+
+            <li class="nav-list">
+                <router-link :to="{name:'Kanban Board'}"  class="nav-link mainlink align-middle">
+                    <img src="../assets/sidebaricon/home.svg" alt="home" />
+                    <span class="ms-1 ">Kanban Board</span>
+                </router-link>
+                
+            </li>
+
             <li class="nav-list">
                 <a href="#submenu3" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
-                    <img src="../assets/sidebaricon/grid.svg" alt="grid" />
-                    <span class="ms-1 ">Products</span>
+                    <img src="../assets/sidebaricon/widget.svg" alt="widget" />
+                    <span class="ms-1 ">Ecommerce</span>
                 </a>
                 <ul class="collapse  flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                     <li class="w-100">
-                        <a href="#" class="nav-link">
-                            <span >Product 1</span>
-                        </a>
+                        <router-link :to="{name:'Product'}" class="nav-link">
+                            -
+                            <span >
+                                Product
+                            </span>
+                        </router-link>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            <span >Product 2</span>
-                        </a>
+                    <li class="w-100">
+                        <router-link :to="{name:'Product Page'}" class="nav-link">
+                            -
+                            <span >
+                                Product Page
+                            </span>
+                        </router-link>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            <span >Product 3</span>
-                        </a>
+                    <li class="w-100">
+                        <router-link :to="{name:'Product List'}" class="nav-link">
+                            -
+                            <span >
+                                Product List
+                            </span>
+                        </router-link>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            <span >Product</span> 4
-                        </a>
+
+                    
+                    <li class="w-100">
+                        <router-link :to="{name:'Recent Order'}" class="nav-link">
+                            -
+                            <span >
+                                Order Details
+                            </span>
+                        </router-link>
                     </li>
+
+                    <li class="w-100">
+                        <router-link :to="{name:'Payment Details'}" class="nav-link">
+                            -
+                            <span >
+                                Payment Details
+                            </span>
+                        </router-link>
+                    </li>
+                    
+                    
                 </ul>
             </li>
-            <li>
-                <a href="#" class="nav-link align-middle">
-                    <img src="../assets/sidebaricon/people.svg" alt="people" />
-                    <span class="ms-1 ">Customers</span>
-                </a>
-            </li>
+
+
+          
         </ul>
 
-        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start gap-3 mt-3 w-100" id="menu">
-            <li class="nav-item listheading py-3 ps-3 rounded-2">
-                <h6 class="mb-0">General</h6>
-            </li>
-
-            <li class="nav-list">
-                <a href="#submenu4" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
-                    <img src="../assets/sidebaricon/speedometer.svg" alt="speedometer" />
-                    <span class="ms-1 ">Dashboards</span>
-                </a>
-                <ul class="collapse  flex-column ms-1" id="submenu4" data-bs-parent="#menu">
-                    <li class="w-100">
-                        <a href="#" class="nav-link">
-                            -
-                            <span >Item 1</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            -
-                            <span>Item 2</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="nav-link align-middle">
-                    <img src="../assets/sidebaricon/table.svg" alt="table" />
-                    <span class="ms-1 ">Orders</span>
-                </a>
-            </li>
-            <li class="nav-list">
-                <a href="#submenu5" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
-                    <img src="../assets/sidebaricon/bootstrap.svg" alt="bootstrap" />
-                    <span class="ms-1 ">Bootstrap</span>
-                </a>
-                <ul class="collapse  flex-column ms-1" id="submenu5" data-bs-parent="#menu">
-                    <li class="w-100">
-                        <a href="#" class="nav-link">
-
-                            <span >Item 1</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            <span >Item 2</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-list">
-                <a href="#submenu6" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
-                    <img src="../assets/sidebaricon/grid.svg" alt="grid" />
-                    <span class="ms-1 ">Products</span>
-                </a>
-                <ul class="collapse  flex-column ms-1" id="submenu6" data-bs-parent="#menu">
-                    <li class="w-100">
-                        <a href="#" class="nav-link">
-                            <span >Product 1</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            <span >Product 2</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            <span >Product 3</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            <span >Product</span> 4
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="nav-link align-middle">
-                    <img src="../assets/sidebaricon/people.svg" alt="people" />
-                    <span class="ms-1 ">Customers</span>
-                </a>
-            </li>
-        </ul>
+     
 
     </div>
 
@@ -220,8 +190,17 @@ export default {
     color: var(--white);
 }
 
-.sidebarlogo h3{
 
+.nav li img{
+
+    width:18px;
+}
+.nav-link{
+    display:flex;
+    align-items:center
+}
+.sidebarlogo h3{
+    font-size:24px;
     color: var(--white);
 }
 .sidebar-list {
@@ -238,6 +217,11 @@ export default {
     color: var(--white);
 }
 
+
+.mainlink:focus{
+
+    background:#ffffff1a;
+}
 li {
     width: 100%;
 }
