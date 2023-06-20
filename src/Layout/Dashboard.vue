@@ -25,7 +25,7 @@
           </div>
 
           <div class="dashboard-footer " :class="{active:sideclose }">
-             <Footer/>
+             <Footer />
           </div>
 
 
@@ -151,7 +151,7 @@ export default {
     color: var(--white);
     font-family: "Roboto";
     font-size: 14px;
-    z-index: 2;
+    z-index: 3;
     
   }
 

@@ -23,53 +23,88 @@
     <div class="container-fluid">
         <div>
             <div class="row product-page-main p-0">
-                <div class="col-xl-5 col-md-6 box-col-12 xl-65">
+                <div class="col-xl-5 col-md-6  col-12  ">
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-xl-9 product-main">
+                                <div class="col-xl-9  product-main">
                                     <div class="pro-slide-single">
-                                        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events mySwiper swiper-backface-hidden">
-                                            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-2320px, 0px, 0px);">
-                                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 434px; margin-right: 30px;"><img src="/koho/img/04.fbc822f1.jpg" id="3" class="img-fluid bg-img" alt="index"></div>
-                                                <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 434px; margin-right: 30px;"><img src="/koho/img/05.79bc0e63.jpg" id="0" class="img-fluid bg-img" alt="index"></div>
-                                                <div class="swiper-slide" data-swiper-slide-index="1" style="width: 434px; margin-right: 30px;"><img src="/koho/img/02.01ea1f72.jpg" id="1" class="img-fluid bg-img" alt="index"></div>
-                                                <div class="swiper-slide" data-swiper-slide-index="2" style="width: 434px; margin-right: 30px;"><img src="/koho/img/03.36f6cbc8.jpg" id="2" class="img-fluid bg-img" alt="index"></div>
-                                                <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="3" style="width: 434px; margin-right: 30px;"><img src="/koho/img/04.fbc822f1.jpg" id="3" class="img-fluid bg-img" alt="index"></div>
-                                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-active swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 434px; margin-right: 30px;"><img src="/koho/img/05.79bc0e63.jpg" id="0" class="img-fluid bg-img" alt="index"></div>
-                                            </div>
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                        </div>
+                                        <swiper :navigation="true"  :autoplay="{delay: 2500,disableOnInteraction: false,}" :modules="modules" class="mySwiper" >
+                                                            <swiper-slide>
+                                                                <div class="item">
+                                                                    <img src="../../assets/product/productside5.jpg" class="img-fluid"/>
+                                                              
+                                                                   
+                                                                </div>
+                                                            </swiper-slide>
+                                                            <swiper-slide>
+                                                                <div class="item">
+                                                                    <img src="../../assets/product/productside2.jpg" class="img-fluid"/>
+                                                              
+                                                                   
+                                                                </div>
+                                                            </swiper-slide>
+                                                            <swiper-slide>
+                                                                <div class="item">
+                                                                    <img src="../../assets/product/productside1.jpg" class="img-fluid"/>
+                                                              
+                                                                   
+                                                                </div>
+                                                            </swiper-slide>
+
+                                                            <swiper-slide>
+                                                                <div class="item">
+                                                                    <img src="../../assets/product/productside9.jpg" class="img-fluid"/>
+                                                              
+                                                                   
+                                                                </div>
+                                                            </swiper-slide>
+                                                            
+                                        </swiper>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 product-thumbnail">
+                                <div class="col-xl-3  product-thumbnail">
                                     <div class="pro-slide-right">
-                                        <div class="swiper swiper-initialized swiper-vertical swiper-pointer-events swiper-autoheight swiper-watch-progress Swiper swiper-thumbs swiper-backface-hidden">
-                                            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, -815px, 0px); height: 160px;">
-                                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="1" style="height: 160px; margin-bottom: 3px;"><img src="/koho/img/02.01ea1f72.jpg" id="1" class="img-fluid bg-img" alt="index" style="height: auto;"></div>
-                                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="2" style="height: 160px; margin-bottom: 3px;"><img src="/koho/img/03.36f6cbc8.jpg" id="2" class="img-fluid bg-img" alt="index" style="height: auto;"></div>
-                                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="3" style="height: 160px; margin-bottom: 3px;"><img src="/koho/img/04.fbc822f1.jpg" id="3" class="img-fluid bg-img" alt="index" style="height: auto;"></div>
-                                                <div class="swiper-slide swiper-slide-thumb-active" data-swiper-slide-index="0" style="height: 160px; margin-bottom: 3px;"><img src="/koho/img/05.79bc0e63.jpg" id="0" class="img-fluid bg-img" alt="index" style="height: auto;"></div>
-                                                <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" style="height: 160px; margin-bottom: 3px;"><img src="/koho/img/02.01ea1f72.jpg" id="1" class="img-fluid bg-img" alt="index" style="height: auto;"></div>
-                                                <div class="swiper-slide swiper-slide-visible swiper-slide-active" data-swiper-slide-index="2" style="height: 160px; margin-bottom: 3px;"><img src="/koho/img/03.36f6cbc8.jpg" id="2" class="img-fluid bg-img" alt="index" style="height: auto;"></div>
-                                                <div class="swiper-slide swiper-slide-visible swiper-slide-next" data-swiper-slide-index="3" style="height: 160px; margin-bottom: 3px;"><img src="/koho/img/04.fbc822f1.jpg" id="3" class="img-fluid bg-img" alt="index" style="height: auto;"></div>
-                                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-visible swiper-slide-thumb-active" data-swiper-slide-index="0" style="height: 160px; margin-bottom: 3px;"><img src="/koho/img/05.79bc0e63.jpg" id="0" class="img-fluid bg-img" alt="index" style="height: auto;"></div>
-                                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="1" style="height: 160px; margin-bottom: 3px;"><img src="/koho/img/02.01ea1f72.jpg" id="1" class="img-fluid bg-img" alt="index" style="height: auto;"></div>
-                                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="2" style="height: 160px; margin-bottom: 3px;"><img src="/koho/img/03.36f6cbc8.jpg" id="2" class="img-fluid bg-img" alt="index" style="height: auto;"></div>
-                                            </div>
-                                            <!---->
-                                            <!---->
-                                            <div class="swiper-pagination"></div>
-                                        </div>
+                                        <swiper :navigation="true"  slidesPerView=3  :direction="'vertical'"      :autoplay="{delay: 5000,disableOnInteraction: false,}" :modules="modules" class="mySwiper swipe">
+                                                            <swiper-slide>
+                                                                <div class="item" >
+                                                                    <img src="../../assets/product/productside5.jpg" class="img-fluid"/>
+                                                              
+                                                                   
+                                                                </div>
+                                                                
+                                                            </swiper-slide>
+                                                            <swiper-slide>
+                                                                <div class="item">
+                                                                    <img src="../../assets/product/productside2.jpg" class="img-fluid"/>
+                                                              
+                                                                   
+                                                                </div>
+                                                            </swiper-slide>
+                                                            <swiper-slide>
+                                                                <div class="item" >
+                                                                    <img src="../../assets/product/productside1.jpg" class="img-fluid"/>
+                                                              
+                                                                   
+                                                                </div>
+                                                            </swiper-slide>
+
+                                                            <swiper-slide>
+                                                                <div class="item" >
+                                                                    <img src="../../assets/product/productside9.jpg" class="img-fluid"/>
+                                                              
+                                                                   
+                                                                </div>
+                                                            </swiper-slide>
+                                                            
+                                        </swiper>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-5 box-col-6 proorder-xl-3 xl-100">
+                <div class="col-xl-5 col-12 ">
                     <div class="card">
                         <div class="card-body">
                             <div class="pro-group pt-0 border-0">
@@ -112,7 +147,9 @@
                                         <li class="bg-warning"></li>
                                         <li class="bg-danger"></li>
                                     </ul>
-                                </div><a href="/koho/ecommerce/cart" class="btn btn-secondary mt-0"><i class="fa fa-shopping-cart me-2"></i>Buy Now</a>
+                                </div><a href="/koho/ecommerce/cart" class="btn btn-secondary mt-0">
+                                    <img src="../../assets/product/shopcart.svg" />
+                                    Buy Now</a>
                             </div>
                             <div class="pro-group">
                                 <p>Rock Paper Scissors Women's Tank Top High Neck Cotton Top Stylish Women Top..</p>
@@ -149,7 +186,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="pro-group">
+                            <div class="pro-group pb-0">
                                 <div class="row">
                                     <div class="col-md-4 xl-50 box-col-30">
                                         <h4 class="product-title">share it</h4>
@@ -157,10 +194,10 @@
                                     <div class="col-md-7 xl-50 box-col-70">
                                         <div class="product-icon">
                                             <ul class="product-social">
-                                                <li class="d-inline-block"><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                <li class="d-inline-block"><a href="https://www.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                                                <li class="d-inline-block"><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                <li class="d-inline-block"><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                                <li class="d-inline-block"><a href="https://www.facebook.com" target="_blank"><img src="../../assets/product/facebook.svg"/></a></li>
+                                                <li class="d-inline-block"><a href="https://www.google.com/" target="_blank"><img src="../../assets/product/google.svg"/></a></li>
+                                                <li class="d-inline-block"><a href="https://twitter.com/" target="_blank"><img src="../../assets/product/twitter.svg"/></a></li>
+                                                <li class="d-inline-block"><a href="https://www.instagram.com/" target="_blank"><img src="../../assets/product/instagram.svg"/></a></li>
                                             </ul>
                                             <form class="d-inline-block f-right"></form>
                                         </div>
@@ -168,12 +205,12 @@
                                 </div>
                             </div>
                             <div class="pro-group pb-0">
-                                <div class="pro-shop"><a href="/koho/ecommerce/cart" class="btn btn-primary m-r-10"><i class="fa fa-shopping-basket me-2"></i>Add To Cart</a><a href="/koho/ecommerce/wishlist" class="btn btn-danger"><i class="fa fa-heart me-2"></i>Add To WishList </a></div>
+                                <div class="pro-shop"><a href="/koho/ecommerce/cart" class="btn btn-primary m-r-10"><img src="../../assets/product/basket.svg" class="me-2"/>Add To Cart</a><a href="/koho/ecommerce/wishlist" class="btn btn-danger"><img src="../../assets/product/heart.svg" class="me-2"/>Add To WishList </a></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-md-6 box-col-6 xl-35 proorder-lg-1">
+                <div class="col-xl-2 col-md-6 col-12 ">
                     <div class="card">
                         <div class="card-body">
                             <div class="filter-block">
@@ -203,7 +240,7 @@
                             <div class="collection-filter-block">
                                 <ul class="pro-services">
                                     <li>
-                                        <div class="d-flex"><i data-name="truck" data-tags="delivery,van,shipping,transport,lorry" data-type="truck" class="vue-feather vue-feather--truck"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck vue-feather__content">
+                                        <div class="d-flex align-items-center"><i data-name="truck" data-tags="delivery,van,shipping,transport,lorry" data-type="truck" class="vue-feather vue-feather--truck"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#534686" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck vue-feather__content">
                                                     <rect x="1" y="3" width="15" height="13"></rect>
                                                     <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
                                                     <circle cx="5.5" cy="18.5" r="2.5"></circle>
@@ -216,7 +253,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="d-flex"><i data-name="clock" data-tags="time,watch,alarm" data-type="clock" class="vue-feather vue-feather--clock"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock vue-feather__content">
+                                        <div class="d-flex align-items-center"><i data-name="clock" data-tags="time,watch,alarm" data-type="clock" class="vue-feather vue-feather--clock"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#534686"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock vue-feather__content">
                                                     <circle cx="12" cy="12" r="10"></circle>
                                                     <polyline points="12 6 12 12 16 14"></polyline>
                                                 </svg></i>
@@ -273,13 +310,47 @@
 </template>
 
 <script>
+
+import {
+    Swiper,
+    SwiperSlide
+} from 'swiper/vue';
+
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import {
+    Navigation,
+    Pagination,
+    Autoplay
+   
+} from 'swiper';
+import 'swiper/css';
 export default {
-    name: 'ProductPage'
+    name: 'ProductPage',
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    setup() {
+        return {
+            modules: [Navigation,Pagination,Autoplay],
+           
+        };
+    },
+    
+
+    
+   
 
 }
 </script>
 
 <style scoped>
+
+.swipe{
+
+    height:482px;
+}
 .card {
     background-color: #1d1930;
     border: 1px solid #2e2846!important;
@@ -295,4 +366,440 @@ export default {
     padding: 25px;
     background-color: transparent;
 }
+
+.product-page-main .pro-group {
+  
+    padding-bottom: 15px;
+}
+
+.product-page-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+ .product-page-details h3 {
+    font-size: 24px;
+    color: hsla(0,0%,100%,.8)!important;
+    font-weight: 500;
+    letter-spacing: .5px;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.Rate {
+    cursor: default;
+}
+
+.Rate__star.filled, .Rate__star.hover {
+    color: #efc20f;
+}
+
+
+.Rate__star {
+  
+    display: inline-block;
+ 
+    text-decoration: none;
+   padding:0px;
+    background: transparent none;
+    border: 0;
+}
+.Rate .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    vertical-align: middle;
+    top: -2px;
+    position: relative;
+    margin: 0 5px;
+}
+
+.Rate__star .icon {
+    top: 0;
+    vertical-align: middle;
+}
+
+.Rate__star {
+    color: #dedbdb;
+
+}
+
+.product-page-details span {
+    padding-left: 15px;
+    font-size:14px;
+    color:#ffffffcc
+}
+
+.product-price del {
+    color: #b4b2ba;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 500;
+    color: #b4b2ba;
+   
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+}
+.product-page-main .color-selector {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.color-selector {
+    line-height: 1;
+
+}
+
+.color-selector ul li {
+    border-color: #2e2846;
+}
+
+.color-selector ul li.white {
+    background-color: #fff;
+}
+
+.color-selector ul li {
+    border-color: #2e2846;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border: 1px solid rgba(83, 70, 134, .102);
+    position: relative;
+    margin-right:2px;
+}
+
+.color-selector ul li.active:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../../assets/product/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 22px;
+    height: 22px;
+    color: #fff;
+    
+
+}
+.bg-primary {
+    background-color: #534686 !important;
+}
+.bg-secondary {
+    background-color: #f73164 !important;
+}
+.bg-success {
+    background-color: #67c100!important;
+    color: #fff;
+}
+.bg-warning {
+    background-color: #e56809!important;
+    color: #fff;
+}
+
+.bg-danger {
+    background-color: #dc0808!important;
+    color: #fff;
+}
+
+.product-page-main .pro-group .btn {
+    font-weight: 500;
+}
+
+.btn {
+    padding: 0.6rem 1.75rem;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.btn-secondary {
+    background-color: #f73164!important;
+    border-color: #f73164!important;
+}
+
+.product-page-main .pro-group:nth-child(n+2) {
+   
+    border-top: 1px solid rgba(83,70,134,.102);
+    border-color: #2e2846;
+}
+
+.product-page-main .pro-group {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.product-page-main p {
+    color: hsla(0,0%,100%,.8);
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: .7px;
+}
+
+.txt-success {
+    color: #67c100!important;
+}
+table td {
+    font-size:14px;
+    color:#ffffffcc;
+}
+
+
+
+.product-page-main .pro-group h4 {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color:#ffffffcc;
+}
+
+.product-social li a {
+   
+
+    font-size: 15px;
+    border: 1px solid rgba(83,70,134,.102);
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    text-align: center;
+    line-height: 2.3;
+    transition: all .3s ease;
+    border-color: #2e2846;
+    color: hsla(0,0%,100%,.8);
+
+}
+
+.product-social li:nth-child(n+2) {
+    margin-left: 10px;
+}
+
+.product-social img{
+    width:22px;
+}
+
+.product-social li a:hover {
+    background-color: #534686;
+}
+
+.btn-primary {
+    background-color: #534686!important;
+    border-color: #534686!important;
+}
+
+.m-r-10 {
+    margin-right: 10px;
+}
+
+.btn-danger, .btn-danger.disabled, .btn-danger:disabled {
+    background-color: #dc0808!important;
+    border-color: #dc0808!important;
+}
+
+ .filter-block h4 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color:#ffffffcc;
+}
+
+.filter-block ul li:nth-child(n+2){
+
+    margin-top:15px;
+}
+.filter-block ul li .form-check {
+    margin-bottom: 0;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+}
+.form-check-input {
+    background-color: #151122;
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 0.25em;
+}
+.form-check .form-check-input {
+    float: left;
+    margin-left: -1.5em;
+    box-shadow:none;
+}
+
+.filter-block ul li .form-check label {
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-size:14px;
+}
+
+.filter-block ul li {
+    color: #9993b4;
+}
+
+.form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: 0.125rem;
+}
+
+.form-check-input:checked[type=checkbox] {
+ background-color:#534686 ;
+
+}
+
+.vue-feather {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: -3px;
+}
+ul.pro-services li svg {
+    color: #534686;
+    margin-right: 24px ;
+}
+
+ul.pro-services li h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    letter-spacing: .5px;
+    font-weight: 500;
+    line-height: 1.2;   
+    color:#fff;
+}
+
+ul.pro-services li p {
+    font-size: 14px;
+    margin-bottom:0px;
+    color: hsla(0,0%,100%,.8);
+}
+
+ul.pro-services li:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+
+
+.product-page-main {
+    padding: 30px;
+}
+
+.border-tab.nav-tabs {
+    border-bottom: 1px solid #2e2846;
+}
+
+
+.border-tab.nav-tabs .nav-item .nav-link {
+    font-size: 16px;
+    color: hsla(0,0%,100%,.8);
+    text-align: center;
+    padding: 10px 25px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s;
+}
+ .product-page-main .border-tab.nav-tabs .nav-item .nav-link.active {
+    color: #fff!important;
+    background-color: #534686;
+    border-bottom: none;
+ 
+}
+
+.product-page-main p {
+    color: hsla(0,0%,100%,.8);
+    font-size: 15px;
+}
+
+.m-t-20 {
+    margin-top: 20px!important;
+}
+
+
+
+
+
+
+
+
+@media all  and (min-width:320px) and (max-width:767px){
+  
+  
+.product-page-main .border-tab.nav-tabs .nav-item .nav-link {
+    padding: 8px 18px;
+    font-size: 14px;
+}
+
+
+
+
+.product-page-main {
+    padding: 15px;
+}
+.card-body{
+
+    padding:20px;
+}
+
+
+}
+@media only screen  and (max-width:1199px){
+    .pro-slide-right{
+
+display:none;
+}
+}
+
+@media only screen  and (max-width:575px){
+
+
+    .border-tab.nav-tabs 
+ {
+   display: block; 
+}
+.border-tab.nav-tabs .nav-item{
+display:block;
+width:100%
+}
+
+.product-page-details {
+    display: block;
+}
+
+.product-page-main .pro-group .btn {
+    padding: 7px 15px;
+    font-size: 12px;
+}
+
+.product-social li a {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+}
+
+.product-page-main .pro-group .btn:nth-child(n+2) {
+    margin-top: 5px;
+}
+ ul.pro-services li h5 {
+    margin-bottom: 0;
+}
+}
+
 </style>

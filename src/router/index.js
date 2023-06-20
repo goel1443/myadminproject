@@ -3,6 +3,32 @@ import Login from '../Layout/Login.vue'
 
 
 const routes = [
+
+
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+    meta:{
+      auth:true
+    }
+   
+
+   
+  },
+
+  {
+    path: '/register',
+    name: 'Register',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../Layout/Register.vue')
+    },
+    meta:{
+      auth:true
+    }
+
+   
+  },
   {
     path: '/',
     name: 'Default',
@@ -92,7 +118,6 @@ const routes = [
   
     
   },
-
   {
     path: '/order/history',
     name: 'Recent Order',
@@ -102,6 +127,8 @@ const routes = [
   
     
   },
+
+ 
 
   {
     path: '/paymentdetail',
@@ -122,33 +149,80 @@ const routes = [
   
     
   },
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login,
-    meta:{
-      auth:true
-    }
-   
 
-   
+
+  {
+    path: '/payment/history',
+    name: 'List of All Payment',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/PaymentManagement/PaymentHistory.vue')
+    },
+  
+    
   },
 
-  {
-    path: '/register',
-    name: 'Register',
-    component: function () {
-      return import(/* webpackChunkName: "about" */ '../Layout/Register.vue')
-    },
-    meta:{
-      auth:true
-    }
 
-   
+  {
+    path: '/payment/manage',
+    name: 'Payment Manage',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/PaymentManagement/PaymentManage.vue')
+    },
+  
+    
+  },
+  
+  
+  {
+    path: '/report',
+    name: 'Report',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Report/Reporting.vue')
+    },
+  
+    
   },
   
 
+  {
+    path: '/promocode',
+    name: 'Promocode Generate',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Promocode/Promocode.vue')
+    },
+  
+    
+  },
+  
+  {
+    path: '/usermanage',
+    name: 'User Information',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/UserManage/Usermanage.vue')
+    },
+  
+    
+  },
 
+  {
+    path: '/planmanage',
+    name: 'Plan Management',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/Plan/Planmanage.vue')
+    },
+  
+    
+  },
+  
+  {
+    path: '/customersupport',
+    name: 'Customer Support',
+    component: function () {
+      return import(/* webpackChunkName: "about" */ '../views/CustSupp/Custsupp.vue')
+    },
+  
+    
+  },
   
   
 ]

@@ -30,7 +30,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive product-table">
-                            <table class="table dataTable display" id="basic-1">
+                            <table class="table dataTable display text-nowrap" id="basic-1">
                                 <thead>
                                     <tr>
                                         <th>Image</th>
@@ -148,6 +148,19 @@
                     </div>
                 </div>
             </div>
+
+
+            
+         <div class="col-sm-12">
+            <div class="card-body">
+                
+          
+            
+                <pagination v-model="page" :records="recordData" :per-page="perPageData" :options="options" @paginate="" />
+
+               
+        </div>
+         </div>
         </div>
     </div>
 </div>
@@ -155,7 +168,24 @@
 
 <script>
 export default {
-    name: 'ProductList'
+    name: 'ProductList',
+    data(){
+
+return{
+
+    page: 1,
+      recordData: 500,
+      perPageData: 10,
+      options: {
+          edgeNavigation: true,
+          chunksNavigation: false,
+          chunk: 5,
+          texts: false,
+          format: false,
+
+      }, 
+}
+}
 
 }
 </script>
@@ -197,8 +227,7 @@ h3 {
     display: block;
     letter-spacing: 1px;
 }
-
-.card .card-body {
+.card-body {
     padding: 25px;
     background-color: transparent;
 }

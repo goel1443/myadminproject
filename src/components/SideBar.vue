@@ -31,7 +31,7 @@
                 <ul class="collapse  flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                     <li class="w-100">
                         <router-link :to="{name:'General'}" class="nav-link">
-                            -
+                          
                             <span >
                                 General
                             </span>
@@ -40,7 +40,7 @@
 
                     <li class="w-100">
                         <router-link :to="{name:'Chart'}" class="nav-link">
-                            -
+                       
                             <span >
                                 Chart
                             </span>
@@ -64,7 +64,7 @@
                 <ul class="collapse  flex-column ms-1" id="submenu2" data-bs-parent="#menu">
                     <li class="w-100">
                         <router-link :to="{name:'Project List'}" class="nav-link">
-                            -
+                       
                             <span>
                                 Project List
                             </span>
@@ -73,7 +73,7 @@
 
                     <li class="w-100">
                         <router-link :to="{name:'Project Create'}" class="nav-link">
-                            -
+                          
                             <span>
                                 Project Create
                             </span>
@@ -101,7 +101,7 @@
                 <ul class="collapse  flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                     <li class="w-100">
                         <router-link :to="{name:'Product'}" class="nav-link">
-                            -
+                        
                             <span >
                                 Product
                             </span>
@@ -109,7 +109,7 @@
                     </li>
                     <li class="w-100">
                         <router-link :to="{name:'Product Page'}" class="nav-link">
-                            -
+                           
                             <span >
                                 Product Page
                             </span>
@@ -117,7 +117,7 @@
                     </li>
                     <li class="w-100">
                         <router-link :to="{name:'Product List'}" class="nav-link">
-                            -
+                          
                             <span >
                                 Product List
                             </span>
@@ -127,7 +127,7 @@
                     
                     <li class="w-100">
                         <router-link :to="{name:'Recent Order'}" class="nav-link">
-                            -
+                         
                             <span >
                                 Order Details
                             </span>
@@ -136,7 +136,7 @@
 
                     <li class="w-100">
                         <router-link :to="{name:'Payment Details'}" class="nav-link">
-                            -
+                           
                             <span >
                                 Payment Details
                             </span>
@@ -147,7 +147,80 @@
                 </ul>
             </li>
 
+            <li class="nav-list">
+                <a href="#submenu4" data-bs-toggle="collapse" class="nav-link navarrow align-middle">
+                    <img src="../assets/sidebaricon/widget.svg" alt="widget" />
+                    <span class="ms-1 ">Payment Management</span>
+                </a>
+                <ul class="collapse  flex-column ms-1" id="submenu4" data-bs-parent="#menu">
+                    
 
+                    
+                    <li class="w-100">
+                        <router-link :to="{name:'List of All Payment'}" class="nav-link">
+                            
+                            <span >
+                                Payment History
+                            </span>
+                        </router-link>
+                    </li>
+
+
+
+                    <li class="w-100">
+                        <router-link :to="{name:'Payment Manage'}" class="nav-link">
+                          
+                            <span >
+                                Payment Manage
+                            </span>
+                        </router-link>
+                    </li>
+
+                   
+                    
+                    
+                </ul>
+            </li>
+
+            <li class="nav-list">
+                <router-link :to="{name:'Report'}"  class="nav-link mainlink align-middle">
+                    <img src="../assets/sidebaricon/home.svg" alt="home" />
+                    <span class="ms-1 ">Reporting</span>
+                </router-link>
+                
+            </li>
+
+            <li class="nav-list">
+                <router-link :to="{name:'Promocode Generate'}"  class="nav-link mainlink align-middle">
+                    <img src="../assets/sidebaricon/home.svg" alt="home" />
+                    <span class="ms-1 ">Promocode Management</span>
+                </router-link>
+                
+            </li>
+
+            <li class="nav-list">
+                <router-link :to="{name:'User Information'}"  class="nav-link mainlink align-middle">
+                    <img src="../assets/sidebaricon/home.svg" alt="home" />
+                    <span class="ms-1 ">User Management</span>
+                </router-link>
+                
+            </li>
+
+            <li class="nav-list">
+                <router-link :to="{name:'Plan Management'}"  class="nav-link mainlink align-middle">
+                    <img src="../assets/sidebaricon/home.svg" alt="home" />
+                    <span class="ms-1 ">Plan Management</span>
+                </router-link>
+                
+            </li>
+
+            <li class="nav-list">
+                <router-link :to="{name:'Customer Support'}"  class="nav-link mainlink align-middle">
+                    <img src="../assets/sidebaricon/home.svg" alt="home" />
+                    <span class="ms-1 ">Customer Support</span>
+                </router-link>
+                
+            </li>
           
         </ul>
 

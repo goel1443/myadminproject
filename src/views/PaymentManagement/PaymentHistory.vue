@@ -13,8 +13,8 @@
                     <li class="breadcrumb-item">
                         <img src="../../assets/default/home.svg" alt="home" />
                     </li>
-                    <li class="breadcrumb-item">Dashboard</li>
-                    <li class="breadcrumb-item active">{{ this.$route.name }}</li>
+                   
+                    <li class="breadcrumb-item ">{{ this.$route.name }}</li>
                 </ol>
             </div>
         </div>
@@ -25,10 +25,10 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header pb-0">
-                        <h3>Order history</h3>
+                        <h3>Payment history</h3>
                     </div>
                     <div class="card-body">
-                        <div class="order-history table-responsive">
+                        <div class="payment-history table-responsive">
                             <table class="table display dataTable text-nowrap" id="basic-1">
                                 <thead>
                                     <tr>
@@ -536,8 +536,7 @@
                 </div>
             </div>
 
-            
-         <div class="col-sm-12">
+            <div class="col-sm-12">
             <div class="card-body">
                 
           
@@ -556,7 +555,6 @@
 export default {
 
     name: 'PaymentHistory',
-
     data(){
 
 return{
@@ -598,7 +596,7 @@ return{
     position: relative;
 }
 
- .card-body {
+.card-body {
     padding: 25px;
     background-color: transparent;
 }
@@ -638,7 +636,7 @@ border-color: #2e2846;
 
 
 
-.order-history table thead tr th {
+.payment-history table thead tr th {
     background-color: #151122;
     color: hsla(0,0%,100%,.8);
     vertical-align: middle;
@@ -681,20 +679,20 @@ a {
     width: 30px!important;
 }
 
-.order-history table tbody tr td .product-name a {
+.payment-history table tbody tr td .product-name a {
     font-size: 15px;
     color: #898989;
 }
-.order-history table tbody tr td .product-name .order-process {
+.payment-history table tbody tr td .product-name .order-process {
     font-size: 13px;
     padding-left: 15px;
 
 }
-.order-history table tbody tr td .product-name .order-process .order-process-circle {
+.payment-history table tbody tr td .product-name .order-process .order-process-circle {
     position: relative;
 }
 
-.order-history table tbody tr td .product-name .order-process .order-process-circle:before {
+.payment-history table tbody tr td .product-name .order-process .order-process-circle:before {
     position: absolute;
     content: "";
     width: 4px;
