@@ -51,7 +51,7 @@
                         </div>
 
                         <div>
-                            <span class="badge bg-secondary py-2 px-3">50/100</span>
+                            <span class="badge bg-secondary py-2 px-3">50/1000</span>
                         </div>
                     </div>
 
